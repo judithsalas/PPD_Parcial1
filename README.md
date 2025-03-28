@@ -2,28 +2,37 @@
 ### Programa de procesamiento de imágenes satelitales
 Judith Mª. Salas García
 
-### Procesamiento Concurrente de Imágenes Satelitales
+Este script simula un centro de procesamiento digital de imágenes recibidas desde satélites, implementando el patrón **Productor-Consumidor** con programación paralela utilizando el módulo `multiprocessing` de Python.
 
-Este programa simula un **centro de procesamiento digital de imágenes satelitales** utilizando **programación paralela en Python** con `multiprocessing`. Representa un escenario realista en el que las imágenes llegan de forma **irregular** y deben ser **procesadas una a una** por un conjunto de analistas automáticos.
+### Objetivo
 
-### Requisitos
+- Simular la **recepción asíncrona** de imágenes satelitales.
+- Procesarlas en paralelo mediante **analistas automáticos**.
+- Garantizar que **no se pierda ninguna imagen**, incluso bajo carga alta.
+- Sincronizar los procesos consumidores para que **comiencen todos al mismo tiempo**.
+- Medir y mostrar el tiempo que tarda cada imagen en ser procesada.
+
+---
+
+### Tecnologías utilizadas
 
 - Python 3.8 o superior
-- Sistema operativo compatible con `multiprocessing` (Linux, Windows o macOS)
+- `multiprocessing` (módulo estándar)
 
-No se requieren bibliotecas externas.
+---
 
-### Archivos
+### Archivos del proyecto
 
-- `procesamiento_satelital.py`: Código principal del programa.
-- `README.md`: Este archivo con instrucciones de uso.
+- `procesamiento_satelital.py` → Código principal con el sistema concurrente.
+- `README.md` → Instrucciones para ejecutar y entender el proyecto.
 
-### Ejecución
+---
 
-1. Clona o descarga este repositorio en tu máquina local.
-2. Abre una terminal en la carpeta del proyecto.
-3. Ejecuta el programa con:
+### ¿Cómo ejecutar el script?
+
+1. Abre una terminal.
+2. Navega a la carpeta donde esté guardado el archivo `procesamiento_satelital.py`.
+3. Ejecuta el script con:
 
 ```bash
 python procesamiento_satelital.py
-
